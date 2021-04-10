@@ -1,0 +1,17 @@
+{
+    "welcomeFile": "index.html",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/catalog/(.*)$",
+            "csrfProtection": false,
+            "authenticationType": "xsuaa",
+            "destination": "jasonhanaapp-srv"
+        },
+        {
+            "source": "^/(.*)$",
+            "authenticationType": "xsuaa",
+            "service": "html5-apps-repo-rt"
+        }
+    ]
+}

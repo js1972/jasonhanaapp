@@ -1,0 +1,16 @@
+{
+    "_version": "",
+    "sap.cloud": {
+        "service": "jasonhanaapp-service"
+    },
+    "sap.app": {
+        "id": "jasonhanaapp-html5",
+        "type": "application",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "Jasons HANA App HTML5",
+        "description": "Jasons HANA App HTML5",
+        "offline": false
+    }
+}

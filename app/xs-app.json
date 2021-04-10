@@ -1,0 +1,5 @@
+{
+    "welcomeFile": "/jasonhanaapphtml5/index.html",
+    "authenticationMethod": "route",
+    "routes": []
+}

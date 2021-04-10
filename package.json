@@ -1,0 +1,46 @@
+{
+  "name": "jasonhanaapp",
+  "version": "0.0.1",
+  "description": "Jasons HANA App",
+  "dependencies": {
+    "@sap/cds": "^4",
+    "@sap/audit-logging": "^3",
+    "@sap/hana-client": "^2",
+    "@sap/xsenv": "^3",
+    "@sap/xssec": "^3",
+    "passport": "^0.4.1",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "5.0.0"
+  },
+  "scripts": {
+    "start": "npx cds run"
+  },
+  "cds": {
+    "requires": {
+      "uaa": {
+        "kind": "xsuaa"
+      },
+      "auth": {
+        "[production]": {
+          "strategy": "JWT"
+        },
+        "[development]": {
+          "strategy": "mock",
+          "users": {
+            "joe": {},
+            "julie": {},
+            "bob": {}
+          }
+        }
+      },
+      "db": {
+        "kind": "sql"
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    }
+  }
+}
